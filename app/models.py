@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from django import forms
+from app.models import LessonFile
 
 class Grade(models.Model):
     name = models.CharField(max_length=50)
@@ -37,3 +38,17 @@ class Lesson(models.Model):
 
     def __str__(self):
         return f'{self.day} - Period {self.period}: {self.course_name}'
+
+
+class LessonFile(models.Model):
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
+    file = models.FileField(upload_to='lesson_files')
+
+    def __str__(self):
+        return self.file.name
+
+class LessonFileForm(forms.ModelForm):
+    class Meta:
+        model = LessonFile
+        fields = ['file']
+
