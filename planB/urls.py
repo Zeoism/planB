@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from app.views import upload_lesson, lesson_detail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('upload/', upload_lesson, name='upload_lesson'),
+    path('lesson/<int:lesson_id>/', lesson_detail, name='lesson_detail'),
 ]

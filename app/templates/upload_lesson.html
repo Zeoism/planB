@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>上傳教學計畫</title>
+</head>
+<body>
+    <h1>上傳教學計畫</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="lesson_name">課程名稱：</label>
+        <input type="text" name="lesson_name" id="lesson_name"><br>
+
+        <label for="teacher">任課老師：</label>
+        <input type="text" name="teacher" id="teacher"><br>
+
+        <label for="lesson_plan">教學計畫：</label>
+        <textarea name="lesson_plan" id="lesson_plan"></textarea><br>
+
+        <label for="lesson_file">上傳檔案：</label>
+        <input type="file" name="lesson_file" id="lesson_file"><br>
+
+        <input type="submit" value="上傳">
+    </form>
+</body>
+</html>
