@@ -1,21 +1,36 @@
-from django.shortcuts import render, redirect
-from .models import Grade, Class, Lesson
-from .forms import LessonForm
+from django.shortcuts import render
+from django.views.generic import CreateView, DetailView
+from app.models import Lesson, LessonFile
+from app.forms import LessonForm, LessonFileForm
 
-def upload_lesson(request):
-    if request.method == 'POST':
-        form = LessonForm(request.POST)
-        if form.is_valid():
-            lesson = form.save(commit=False)
-            lesson.uploaded_by = request.user
-            lesson.save()
-            return redirect('lesson_detail', lesson_id=lesson.id)
-    else:
-        form = LessonForm()
-    
-    return render(request, 'upload_lesson.html', {'form': form})
+class LessonCreateView(CreateView):
+    model = Lesson
+    form_class = LessonForm
+    template_name = 'upload_lesson.html'
+    success_url = '/'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['file_form'] = LessonFileForm()
+        return context
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        lesson = form.instance
+        file_form = LessonFileForm(self.request.POST, self.request.FILES)
+        if file_form.is_valid():
+            file = file_form.save(commit=False)
+            file.lesson = lesson
+            file.save()
+        return response
 
 
-def lesson_detail(request, lesson_id):
-    lesson = Lesson.objects.get(id=lesson_id)
-    return render(request, 'lesson_detail.html', {'lesson': lesson})
+class LessonDetailView(DetailView):
+    model = Lesson
+    template_name = 'lesson_detail.html'
+    context_object_name = 'lesson'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['files'] = LessonFile.objects.filter(lesson=self.object)
+        return context
