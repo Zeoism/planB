@@ -4,6 +4,7 @@ body {
 
 h1 {
     background-color: darkgray;
+    color: azure;
 }
 
 h2 {
@@ -12,7 +13,10 @@ h2 {
 
 h3 {
     background-color: honeydew;
-    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 15px;    
 }
 .button1 {
     
@@ -36,10 +40,54 @@ h3 {
    box-shadow: 0 10px 11px 0 rgba(0,0,0,0.24), 0 10px 15px 0 rgba(0,0,0,0.19);
    }
 
+   .button2 {
+    
+    border: lightblue solid;
+    color: steelblue;
+    background-color: whitesmoke;
+    padding: 9px 13px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 15px;
+    transition-duration: 0.4s;
+  }
+
+  .button2:hover{
+    /* Animation */
+   border: ghostwhite solid;
+   background-color: mediumaquamarine;
+   color: whitesmoke;
+   box-shadow: 0 10px 11px 0 rgba(0,0,0,0.24), 0 8px 12px 0 rgba(0,0,0,0.19);
+   }
+
+   .button3 {
+    
+    border: lightblue solid;
+    color: steelblue;
+    background-color: whitesmoke;
+    padding: 3px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 9px;
+    font-size: 15px;
+    transition-duration: 0.4s;
+  }
+
+  .button3:hover{
+    /* Animation */
+   border: ghostwhite solid;
+   background-color: mediumaquamarine;
+   color: whitesmoke;
+   box-shadow: 0 9px 10px 0 rgba(0,0,0,0.24), 0 6px 10px 0 rgba(0,0,0,0.19);
+   }
 .button7{
-    background-color: lightseagreen;
+    background-color: lightblue;
     border: none;
-    color: whitesmoke;
+    color: white;
+    border: 2px solid white;
     padding: 7px 10px;
     text-align: center;
     text-decoration: none;
@@ -59,7 +107,8 @@ h3 {
  .button8{
     background-color: lightblue;
     border: none;
-    color: whitesmoke;
+    color: white;
+    border: 3px solid white;
     padding: 7px 10px;
     text-align: center;
     text-decoration: none;
@@ -73,6 +122,7 @@ h3 {
     /* Animation */
    background-color: whitesmoke;
    color: steelblue;
+   border: 3px solid white;
    box-shadow: 0 4px 6px 0 rgba(0,0,0,0.24), 0 7px 10px 0 rgba(0,0,0,0.19);
  }
 

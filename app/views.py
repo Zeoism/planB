@@ -55,10 +55,6 @@ class LessonClassView(ListView):
         ctx['class'] = self.kwargs['cid']
         return ctx
 
-# class LessonDeleteView(DeleteView):
-#     model = Lesson
-#     template_name = 'lesson_delete.html'
-#     success_url = reverse_lazy('class/<int:gid>/<int:cid>/')
 class HomePageView(ListView):
     model = Lesson
     template_name = 'startpage.html'

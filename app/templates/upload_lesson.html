@@ -5,13 +5,14 @@
         
         <form method="post" enctype="multipart/form-data" class = form>
             {% csrf_token %}
-            {{ form.as_p }}   
+            {{ form.as_p }}
+            {% if user.is_authenticated %}
+                <input type="submit" value="上傳" class = button1>
+            {% else %}
+                <h3>您必須先登入過後才可以上傳教學計畫！</h3>
+            {% endif %}   
         </form>
-        {% if user.is_authenticated %}
-            <input type="submit" value="上傳" class = button1>
-        {% else %}
-            <h3>您必須先登入過後才可以上傳教學計畫！</h3>
-        {% endif %}
+        
     </body>
 {% endblock content %}
 

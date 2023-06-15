@@ -2,11 +2,17 @@
 {% block content %}
 <body>
     <h1>教學計畫詳細內容</h1>
-    <h2>班級：{{ lesson.grade }}年 {{ lesson.class_name }} 班</h2>
-    <h3>課程名稱： {{ lesson.course_name }}</h3>
-    <h3>任課老師：{{ lesson.teacher }}</h3>
-    <h3>教學計畫：</h3>
-    <p><a href="/upload/{{ lesson.teaching_plan }}" class = button1>{{ lesson.teaching_plan }}</a></p>
+    <h2>班級：{{ lesson.grade }} 年 {{ lesson.class_name }} 班</h2>
+    課程名稱： {{ lesson.course_name }}
+    <br>
+    <br>
+    任課老師：{{ lesson.teacher }}
+    <br>
+    <br>
+    <span>
+        教學計畫：<a href="/upload/{{ lesson.teaching_plan }}" class = button2>{{ lesson.teaching_plan }}</a>
+    </span>
+    
     
 </body>
 {% endblock content %}

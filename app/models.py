@@ -25,4 +25,4 @@ class Lesson(models.Model):
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f'Period : {self.course_name}'
+        return f'{self.course_name}'

@@ -15,10 +15,9 @@
             | 登入身分：{{ user.username }} |  <a href="{% url 'logout' %}" class = button7>登出</a>
         {% else %}
             | 登入身分：訪客 |<a href="{% url 'login' %}" class = button7>登入</a>
-        {% endif %}
+        {% endif %}                
     </span>
     {% block content %}
     {% endblock content %}
-    <p>                          - OURWEB.co presentation</p>
 </body>
 </html>
