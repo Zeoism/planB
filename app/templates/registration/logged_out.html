@@ -1,8 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>您已經登出!</h1>
 
-<a href="{% url 'login' %}" class = button7>重新登入</a>
-<a href = "/../../upl" class = button8>返回上傳頁面</a>
+<div class="card" style="width: 50%; margin: auto;">
+    <div class="card-body">
+      <h5 class="card-title">您已登出！</h5>
+      <h6 class="card-subtitle mb-2 text-muted">您隨時可以再次登入</h6>
+      <p class="card-text">希望您的離開是暫時的，我們期待您再度到來！</p>
+      <a href="{% url 'login' %}" class="card-link">請按此處重新登入</a>
+      <a href="/../../upl" class="card-link">返回上傳頁面</a>
+    </div>
+  </div>
+
 {% endblock content %}
