@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>班級{{ grade }}年{{ class }}班的教學計畫</h1>
+
+{% for lesson in lesson_list %}
+    <li>
+        課程名稱：
+        {{ lesson.course_name }}/任教導師：
+        {{ lesson.teacher }}/
+        <a href= "{% url 'lesson_detail' lesson.id %}" class = button1> 瞭解詳情</a>
+    </li>
+{% endfor %}
+
+{% endblock content %}

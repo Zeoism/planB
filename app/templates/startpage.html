@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>教學計畫上傳網站</h1>
+<h2>查找班級之教學計畫：</h2>
+{% for grade in grade_list %}
+    <h3>{{ grade }}年級：</h3>
+    {% for cls in class_list  %}
+    <a href="{% url 'lesson_class_view' grade cls %}">{{ grade }}Year{{ cls }}class</a>
+    {% endfor %}
+{% endfor %}
+<h2>上傳教學計畫：</h2>
+<a href="{% url 'upload_lesson' %}"  class = button1>上傳教學計畫</a>
+{% endblock content %}

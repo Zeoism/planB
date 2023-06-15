@@ -2,17 +2,16 @@
 {% block content %}
     <body>
         <h1>上傳教學計畫</h1>
-        {% if user.is_authenticated %}
-            {{ user.username }} <a href="{% url 'logout' %}">Logout</a>
-        {% else %}
-            <a href="{% url 'login' %}">Login</a>
-        {% endif %}
-        <form method="post" enctype="multipart/form-data">
+        
+        <form method="post" enctype="multipart/form-data" class = form>
             {% csrf_token %}
-            {{ form.as_p }}
-            
-            <input type="submit" value="上傳">
+            {{ form.as_p }}   
         </form>
+        {% if user.is_authenticated %}
+            <input type="submit" value="上傳" class = button1>
+        {% else %}
+            <h3>您必須先登入過後才可以上傳教學計畫！</h3>
+        {% endif %}
     </body>
 {% endblock content %}
 

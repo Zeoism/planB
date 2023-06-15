@@ -2,13 +2,13 @@
 
 {% block content %}
 
-<h2>Login</h2>
+<h1>用戶登入</h1>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Log in</button>
+    <button type="submit" class = button7>登入</button>
 
-    <a href = "/../../upl">Back</a>
+    <a href = "/../../upl" class = button8>返回上傳頁面</a>
 </form>
 
 {% endblock content %}

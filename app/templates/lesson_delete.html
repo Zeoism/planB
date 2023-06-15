@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>刪除已上傳之教學計畫</h1>
+<p>您確定要刪除「{{ lesson.grade }}{{ lesson.class_name }}{{ lesson.teacher }}的{{ lesson.course_name }}教學計畫嗎」?</p>
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" action="" value="確認" class = button7>
+    <a href = "../" class = button8>返回檢視頁面</a>
+</form>
+{% endblock content %}

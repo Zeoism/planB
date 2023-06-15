@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href= "../../static/style.css" />
+    <link rel="stylesheet" href= "/static/style.css" />
     <!-- -->
     <title>OURWEB</title>
 </head>
 <body>
+    <span>
+        <a href="{% url 'home' %}" class = homebutton>🏠</a>
+        {% if user.is_authenticated %}
+            | 登入身分：{{ user.username }} |  <a href="{% url 'logout' %}" class = button7>登出</a>
+        {% else %}
+            | 登入身分：訪客 |<a href="{% url 'login' %}" class = button7>登入</a>
+        {% endif %}
+    </span>
     {% block content %}
     {% endblock content %}
     <p>                          - OURWEB.co presentation</p>

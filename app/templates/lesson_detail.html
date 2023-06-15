@@ -6,12 +6,7 @@
     <h3>課程名稱： {{ lesson.course_name }}</h3>
     <h3>任課老師：{{ lesson.teacher }}</h3>
     <h3>教學計畫：</h3>
-    <p>{{ lesson.lesson_plan }}</p>
-    {% if lesson.lesson_file %}
-        <h3>教學計畫文件：</h3>
-        <a href="{{ lesson.lesson_file.url }}">下載</a>
-        <h3>文件預覽：</h3>
-        <embed src="{{ lesson.lesson_file.url }}" width="500" height="600" type='application/pdf'>
-    {% endif %}
+    <p><a href="/upload/{{ lesson.teaching_plan }}" class = button1>{{ lesson.teaching_plan }}</a></p>
+    
 </body>
 {% endblock content %}
