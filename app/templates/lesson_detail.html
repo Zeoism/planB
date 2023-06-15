@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>教學計畫詳細內容</title>
-</head>
+{% extends "base.html" %}
+{% block content %}
 <body>
     <h1>教學計畫詳細內容</h1>
-    <h2>課程名稱：{{ lesson.lesson_name }}</h2>
+    <h2>班級：{{ lesson.grade }}年 {{ lesson.class_name }} 班</h2>
+    <h3>課程名稱： {{ lesson.course_name }}</h3>
     <h3>任課老師：{{ lesson.teacher }}</h3>
     <h3>教學計畫：</h3>
     <p>{{ lesson.lesson_plan }}</p>
-
     {% if lesson.lesson_file %}
         <h3>教學計畫文件：</h3>
         <a href="{{ lesson.lesson_file.url }}">下載</a>
@@ -17,4 +14,4 @@
         <embed src="{{ lesson.lesson_file.url }}" width="500" height="600" type='application/pdf'>
     {% endif %}
 </body>
-</html>
+{% endblock content %}
