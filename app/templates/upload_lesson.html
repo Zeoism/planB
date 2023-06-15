@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
     <body>
-        <h1>上傳教學計畫</h1>
+        <h1 class="alert alert-warning" role="alert">上傳教學計畫</h1>
         
-        <form method="post" enctype="multipart/form-data" class = form>
+        <form method="post" enctype="multipart/form-data" class = form-control >
             {% csrf_token %}
             {{ form.as_p }}
             {% if user.is_authenticated %}

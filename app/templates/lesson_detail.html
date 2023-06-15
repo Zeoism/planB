@@ -1,18 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
 <body>
-    <h1>教學計畫詳細內容</h1>
-    <h2>班級：{{ lesson.grade }} 年 {{ lesson.class_name }} 班</h2>
-    課程名稱： {{ lesson.course_name }}
-    <br>
-    <br>
-    任課老師：{{ lesson.teacher }}
-    <br>
-    <br>
-    <span>
-        教學計畫：<a href="/upload/{{ lesson.teaching_plan }}" class = button2>{{ lesson.teaching_plan }}</a>
-    </span>
+    <h1 class="alert alert-warning" role="alert">教學計畫詳細內容</h1>
+
+    <h4 class="alert alert-info" role="alert">班級：{{ lesson.grade }} 年 {{ lesson.class_name }} 班</h4>
+
     
+    <div class="list-group">
+
+  <a href="/upload/{{ lesson.teaching_plan }}" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h4 class="mb-1">課程名稱： {{ lesson.course_name }}</h4>
+
+    </div>
+    <p class="mb-1">任課老師：{{ lesson.teacher }}</p>
+    <small class="text-body-secondary">{{ lesson.teaching_plan }}</small>
+  </a>
+
+</div>
     
 </body>
 {% endblock content %}

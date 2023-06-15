@@ -2,13 +2,29 @@
 
 {% block content %}
 
-<h1>用戶登入</h1>
+{% comment %} <h1>用戶登入</h1>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class = button7>登入</button>
 
     <a href = "/../../upl" class = button8>返回上傳頁面</a>
-</form>
+</form> {% endcomment %}
+
+
+<div class="card" style="width: 50%; margin: auto;">
+    <div class="card-body">
+      <h5 class="card-title">歡迎登入！</h5>
+      <h6 class="card-subtitle mb-2 text-muted">登入以享受各種功能！</h6>
+      <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <div>
+            <input type="submit" value="登入">
+        </div>
+      </form>
+      <a href="/../../upl" class="card-link">返回上傳頁面</a>
+    </div>
+</div>
 
 {% endblock content %}
