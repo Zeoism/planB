@@ -57,7 +57,7 @@ background-size: cover;">
 
         <li class="nav-item">
         {% if user.is_authenticated %}
-        哈囉！{{ user.username }} 
+        哈囉！{{ user.username }}  
         <a href="{% url 'logout' %}" class="nav-link" >登出</a>
         {% else %}
         <a href="{% url 'login' %}" class="nav-link">登入</a>
