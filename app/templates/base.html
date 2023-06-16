@@ -17,14 +17,6 @@ background-attachment: fixed;
 background-position: center;
 background-size: cover;">
 
-    {% comment %}
-        {% if user.is_authenticated %}
-            | 登入身分：{{ user.username }} |  <a href="{% url 'logout' %}" class = button7>登出</a>
-        {% else %}
-            | 登入身分：訪客 |<a href="{% url 'login' %}" class = button7>登入</a>
-        {% endif %}                
-    {% endcomment %}
-
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="{% url 'home' %}">大直高中教學計畫上傳網站</a>
@@ -50,19 +42,28 @@ background-size: cover;">
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="https://www.instagram.com/dzdecrew/">大直第一CREW團隊IG</a></li>
           </ul>
-        </li>
-        {% comment %} <li class="nav-item">
+        </li
+        {% comment %} <li class="nav-item" nowrap>
           <a class="nav-link disabled">For rent</a>
         </li> {% endcomment %}
 
-        <li class="nav-item">
-        {% if user.is_authenticated %}
-        哈囉！{{ user.username }}  
-        <a href="{% url 'logout' %}" class="nav-link" >登出</a>
-        {% else %}
-        <a href="{% url 'login' %}" class="nav-link">登入</a>
-        {% endif %}
+        
+        <li class="nav-item" >
+            {% if user.is_authenticated %}
+            哈囉！{{ user.username }}
+            {% else %}
+            {% endif %}
         </li>
+        <li class="nav-item">
+            {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}" class="nav-link" >登出</a>
+            {% else %}
+            <a href="{% url 'login' %}" class="nav-link">登入</a>
+            {% endif %}
+        </li>
+            
+        
+        
 
       </ul>
       <form class="d-flex" role="search">
@@ -92,19 +93,18 @@ background-size: cover;">
   </li>
   
 </ul>
-
+    
     <div class="container" >
 
-    {% comment %} {% if user.is_authenticated %}
-        哈囉！{{ user.username }} <a href="{% url 'logout' %}" class="btn btn-outline-info"
+    <!-- {% comment %} {% if user.is_authenticated %}
+        哈囉！{{ user.username }} <a href="{% url 'logout' %}" class="inline"
         style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">登出</a>
     {% else %}
         <a href="{% url 'login' %}" class="btn btn-outline-info"
         style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">登入</a>
-    {% endif %} {% endcomment %}
+    {% endif %} {% endcomment %} -->
     
     <div id="main-content">
-
 
     {% block content %}
     {% endblock content %}

@@ -1,153 +1,158 @@
 body {
-    background-color: lightsteelblue;
+  background-color: lightsteelblue;
 }
 
 h1 {
-    background-color: darkgray;
-    color: azure;
+  background-color: darkgray;
+  color: azure;
 }
 
 h2 {
-    background-color: darkgrey;
+  background-color: darkgrey;
 }
 
 h3 {
-    background-color: honeydew;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 40px;
-    font-size: 15px;    
+  background-color: honeydew;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 40px;
+  font-size: 15px;    
 }
 .button1 {
+  
+  border: lightblue solid;
+  color: steelblue;
+  background-color: whitesmoke;
+  padding: 12px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 15px;
+  transition-duration: 0.4s;
+}
+
+.button1:hover{
+/* Animation */
+border: ghostwhite solid;
+background-color: mediumaquamarine;
+color: whitesmoke;
+box-shadow: 0 10px 11px 0 rgba(0,0,0,0.24), 0 10px 15px 0 rgba(0,0,0,0.19);
+}
+
+.button2 {
     
-    border: lightblue solid;
-    color: steelblue;
-    background-color: whitesmoke;
-    padding: 12px 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 10px;
-    font-size: 15px;
-    transition-duration: 0.4s;
+  border: lightblue solid;
+  color: steelblue;
+  background-color: whitesmoke;
+  padding: 9px 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 15px;
+  transition-duration: 0.4s;
+}
+
+.button2:hover{
+  /* Animation */
+  border: ghostwhite solid;
+  background-color: mediumaquamarine;
+  color: whitesmoke;
+  box-shadow: 0 10px 11px 0 rgba(0,0,0,0.24), 0 8px 12px 0 rgba(0,0,0,0.19);
   }
 
-  .button1:hover{
-    /* Animation */
-   border: ghostwhite solid;
-   background-color: mediumaquamarine;
-   color: whitesmoke;
-   box-shadow: 0 10px 11px 0 rgba(0,0,0,0.24), 0 10px 15px 0 rgba(0,0,0,0.19);
-   }
+  .button3 {
+  
+  border: lightblue solid;
+  color: steelblue;
+  background-color: whitesmoke;
+  padding: 3px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 9px;
+  font-size: 15px;
+  transition-duration: 0.4s;
+}
 
-   .button2 {
-    
-    border: lightblue solid;
-    color: steelblue;
-    background-color: whitesmoke;
-    padding: 9px 13px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 10px;
-    font-size: 15px;
-    transition-duration: 0.4s;
+.button3:hover{
+  /* Animation */
+  border: ghostwhite solid;
+  background-color: mediumaquamarine;
+  color: whitesmoke;
+  box-shadow: 0 9px 10px 0 rgba(0,0,0,0.24), 0 6px 10px 0 rgba(0,0,0,0.19);
   }
-
-  .button2:hover{
-    /* Animation */
-   border: ghostwhite solid;
-   background-color: mediumaquamarine;
-   color: whitesmoke;
-   box-shadow: 0 10px 11px 0 rgba(0,0,0,0.24), 0 8px 12px 0 rgba(0,0,0,0.19);
-   }
-
-   .button3 {
-    
-    border: lightblue solid;
-    color: steelblue;
-    background-color: whitesmoke;
-    padding: 3px 5px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 9px;
-    font-size: 15px;
-    transition-duration: 0.4s;
-  }
-
-  .button3:hover{
-    /* Animation */
-   border: ghostwhite solid;
-   background-color: mediumaquamarine;
-   color: whitesmoke;
-   box-shadow: 0 9px 10px 0 rgba(0,0,0,0.24), 0 6px 10px 0 rgba(0,0,0,0.19);
-   }
 .button7{
-    background-color: lightblue;
-    border: none;
-    color: white;
-    border: 2px solid white;
-    padding: 7px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 10px;
-    font-size: 14px;
-    transition-duration: 0.4s;
+  background-color: lightblue;
+  border: none;
+  color: white;
+  border: 2px solid white;
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 14px;
+  transition-duration: 0.4s;
+}
+
+.button7:hover{
+  /* Animation */
+  background-color: whitesmoke;
+  color: lightseagreen;
+  box-shadow: 0 4px 6px 0 rgba(0,0,0,0.24), 0 7px 10px 0 rgba(0,0,0,0.19);
+}
+
+.button8{
+  background-color: lightblue;
+  border: none;
+  color: white;
+  border: 3px solid white;
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 14px;
+  transition-duration: 0.4s;
+}
+
+.button8:hover{
+  /* Animation */
+  background-color: whitesmoke;
+  color: steelblue;
+  border: 3px solid white;
+  box-shadow: 0 4px 6px 0 rgba(0,0,0,0.24), 0 7px 10px 0 rgba(0,0,0,0.19);
+}
+
+.homebutton{
+  background-color: lightblue;
+  border: none;
+  color: whitesmoke;
+  padding: 4px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 8px;
+  font-size: 30px;
+  transition-duration: 0.4s;
+}
+
+.homebutton:hover{
+  /* Animation */
+  background-color: whitesmoke;
+  color: steelblue;
+  box-shadow: 0 10px 11px 0 rgba(0,0,0,0.18), 0 10px 15px 0 rgba(0,0,0,0.19);
   }
 
-  .button7:hover{
-    /* Animation */
-   background-color: whitesmoke;
-   color: lightseagreen;
-   box-shadow: 0 4px 6px 0 rgba(0,0,0,0.24), 0 7px 10px 0 rgba(0,0,0,0.19);
- }
+.form{
+background-color: whitesmoke;
+text-align: left;
+display: inline-block;
+}
 
- .button8{
-    background-color: lightblue;
-    border: none;
-    color: white;
-    border: 3px solid white;
-    padding: 7px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 10px;
-    font-size: 14px;
-    transition-duration: 0.4s;
-  }
-
-  .button8:hover{
-    /* Animation */
-   background-color: whitesmoke;
-   color: steelblue;
-   border: 3px solid white;
-   box-shadow: 0 4px 6px 0 rgba(0,0,0,0.24), 0 7px 10px 0 rgba(0,0,0,0.19);
- }
-
- .homebutton{
-    background-color: lightblue;
-    border: none;
-    color: whitesmoke;
-    padding: 4px 8px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 8px;
-    font-size: 30px;
-    transition-duration: 0.4s;
- }
-
- .homebutton:hover{
-    /* Animation */
-   background-color: whitesmoke;
-   color: steelblue;
-   box-shadow: 0 10px 11px 0 rgba(0,0,0,0.18), 0 10px 15px 0 rgba(0,0,0,0.19);
-   }
- 
-   .form{
-    background-color: whitesmoke;
-    text-align: left;
-    display: inline-block;
-   }
+.inline{
+  display: inline;
+  
+}
