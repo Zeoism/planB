@@ -8,8 +8,10 @@
 
 <div class="d-grid gap-2 d-md-block">
 {% for grade in grade_list %}
-    <h3>{{ grade }}年級</h3>
+    <h3>{{ grade }}年級</h3> 
+    &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
     {% for cls in class_list  %}
+    &thinsp; 
     <a href="{% url 'lesson_class_view' grade cls %}" class=button2  >{{ grade }}年{{ cls }}班</a>
     {% endfor %}
     <br>
